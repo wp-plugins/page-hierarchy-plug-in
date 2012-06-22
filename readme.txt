@@ -1,7 +1,7 @@
 === Sub Page hierarchy ===
 Contributors: mpntod
 Donate link: http://www.martintod.org.uk/blog/?p=96
-Tags: menu,widget
+Tags: menu,widget,page
 Requires at least: 2.0
 Tested up to: 3.4
 Author URI: http://www.martintod.org.uk/blog/
