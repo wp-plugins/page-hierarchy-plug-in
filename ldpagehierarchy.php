@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Sub page hierarchy
-Description: Adds a sidebar widget to let you select a subpage hierarchy to display on your site
+Description: Adds a sidebar widget to let you show the list of pages beneath a particular page on your site
 Author: Martin Tod
 Version: 1.3
 
