@@ -17,6 +17,8 @@ Adds a sidebar widget to let you show the list of pages beneath a particular pag
 
 A quick way to show a subset of pages - without having to show all the pages on the site.
 
+The options page for the widget shows a drop-down box of all the pages in your blog. Select one of them and only pages below that will be displayed by the widget on the menu.
+
 == Installation ==
 
 This section describes how to install the plugin and get it working.
