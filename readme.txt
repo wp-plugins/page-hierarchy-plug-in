@@ -32,11 +32,11 @@ e.g.
 
 == Upgrade notice ==
 = 1.5 =
-* Add missing <ul> tags
+* Add missing `<ul>` tags
 
 == Changelog ==
 = 1.5 =
-* Add missing <ul> tags
+* Add missing `<ul>` tags
 
 = 1.4 =
 * Remove deprecated functions
