@@ -3,7 +3,7 @@ Contributors: mpntod
 Donate link: http://www.martintod.org.uk/blog/?p=96
 Tags: menu,widget
 Requires at least: 2.0
-Tested up to: 3.4
+Tested up to: 3.8
 Author URI: http://www.martintod.org.uk/blog/
 Stable tag: 1.5
 License: GPLv2 or later
@@ -29,14 +29,20 @@ e.g.
 1. Go to the right of the page and hit 'edit' next to 'sub page hierarchy'
 1. Select the top page of your hierarchy under 'head page'
 1. Click 'change' and then 'save changes'
+== Frequently asked questions ==
+
+
+= Help. My widget disappeared with the latest upgrade. Is that right? =
+
+Yes. Unfortunately, moving from the deprecated `register_sidebar_widget()` to the new `wp_register_sidebar_widget()` function removes your widget from the widget area or sidebar.  If you just put it back into the widget area or sidebar, your settings should still be there.
 
 == Upgrade notice ==
 = 1.5 =
-* Add missing `<ul>` tags
+* Adds missing `ul` tags. Removes deprecated function. WARNING: This will require you to re-add your widget to the sidebar or widget area.
 
 == Changelog ==
 = 1.5 =
-* Add missing `<ul>` tags
+* Add missing `ul` tags.
 
 = 1.4 =
 * Remove deprecated functions
