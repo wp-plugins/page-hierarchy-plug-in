@@ -32,20 +32,23 @@ e.g.
 
 == Upgrade notice ==
 = 1.5 =
-* Add missing <ul> tags
+* Add missing `<ul>` tags
 
 == Changelog ==
 = 1.5 =
-* Add missing <ul> tags
+* Add missing `<ul>` tags
 
 = 1.4 =
 * Remove deprecated functions
 
 = 1.3 =
 * Fixing the invisible drop-down box problem. Moving to the standard Wordpress  `wp_dropdown_pages()` function.
+
 = 1.2 =
 * Update by Will Howells for v2 change in DB structure for pages.
+
 = 1.1 =
 * Fixes a bug which means that page number isn't remembered.
+
 = 1.0 =
 * Original public version
