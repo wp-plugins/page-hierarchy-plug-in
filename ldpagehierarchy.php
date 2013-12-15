@@ -3,7 +3,7 @@
 Plugin Name: Sub page hierarchy
 Description: Adds a sidebar widget to let you show the list of pages beneath a particular page on your site
 Author: Martin Tod
-Version: 1.3
+Version: 1.5
 
 */
 
@@ -12,6 +12,8 @@ Version 1.0 (August 27, 2006) Original public version
 Version 1.1 (September 12, 2006) Fixes a bug which means that page number isn't remembered.
 Version 1.2 (November 26, 2007) Update by Will Howells for v2 change in DB structure for pages.
 Version 1.3 (June 22, 2012) Fixing the invisible drop-down box problem.
+Version 1.4 (January 13, 2013) Remove deprecated functions
+Version 1.5 (December 15, 2013) Add <ul> tags
 */
 
 // Put functions into one big function we'll call at the plugins_loaded
@@ -38,9 +40,9 @@ function widget_subpagehierarchy_init() {
 		settype($headpage,"integer");
 		// These lines generate our output. Widgets can be very complex
 		// but as you can see here, they can also be very, very simple.
-		echo $before_widget . $before_title . $title . $after_title;
+		echo $before_widget . $before_title . $title . $after_title . "<ul>";
 		wp_list_pages("sort_column=menu_order&child_of=$headpage&title_li=" );
-		echo $after_widget;
+		echo "</ul>" . $after_widget;
 	}
 
 	// This is the function that outputs the form to let the users edit
@@ -83,11 +85,11 @@ function widget_subpagehierarchy_init() {
 	}	
 	// This registers our widget so it appears with the other available
 	// widgets and can be dragged and dropped into any active sidebars.
-	register_sidebar_widget('Sub page hierarchy', 'widget_subpagehierarchy');
+	wp_register_sidebar_widget('ldpagehierarchy', 'Sub page hierarchy', 'widget_subpagehierarchy');
 
 	// This registers our optional widget control form. Because of this
 	// our widget will have a button that reveals a 300x100 pixel form.
-	register_widget_control('Sub page hierarchy', 'widget_subpagehierarchy_control', 400, 200);
+	wp_register_widget_control('ldpagehierarchy', 'Sub page hierarchy', 'widget_subpagehierarchy_control');
 }
 
 // Run our code later in case this loads prior to any required plugins.

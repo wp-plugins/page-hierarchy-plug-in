@@ -5,7 +5,7 @@ Tags: menu,widget
 Requires at least: 2.0
 Tested up to: 3.4
 Author URI: http://www.martintod.org.uk/blog/
-Stable tag: 1.3
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,15 +31,21 @@ e.g.
 1. Click 'change' and then 'save changes'
 
 == Upgrade notice ==
-= 1.3 =
-Gets rid of the empty drop-down box if there are no pages to show and replaces it with an error message.
+= 1.5 =
+* Add missing <ul> tags
 
 == Changelog ==
+= 1.5 =
+* Add missing <ul> tags
+
+= 1.4 =
+* Remove deprecated functions
+
 = 1.3 =
-(June 22, 2012) Fixing the invisible drop-down box problem. Moving to the standard Wordpress  `wp_dropdown_pages()` function.
+* Fixing the invisible drop-down box problem. Moving to the standard Wordpress  `wp_dropdown_pages()` function.
 = 1.2 =
-(November 26, 2007) Update by Will Howells for v2 change in DB structure for pages.
+* Update by Will Howells for v2 change in DB structure for pages.
 = 1.1 =
-(September 12, 2006) Fixes a bug which means that page number isn't remembered.
+* Fixes a bug which means that page number isn't remembered.
 = 1.0 =
-(August 27, 2006) Original public version
+* Original public version
