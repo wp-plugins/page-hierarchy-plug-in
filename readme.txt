@@ -3,7 +3,7 @@ Contributors: mpntod
 Donate link: http://www.martintod.org.uk/blog/?p=96
 Tags: menu,widget
 Requires at least: 2.0
-Tested up to: 3.8
+Tested up to: 3.8.1
 Author URI: http://www.martintod.org.uk/blog/
 Stable tag: 1.5
 License: GPLv2 or later
@@ -37,10 +37,13 @@ e.g.
 Yes. Unfortunately, moving from the deprecated `register_sidebar_widget()` to the new `wp_register_sidebar_widget()` function removes your widget from the widget area or sidebar.  If you just put it back into the widget area or sidebar, your settings should still be there.
 
 == Upgrade notice ==
-= 1.5 =
-* Adds missing `ul` tags. Removes deprecated function. WARNING: This will require you to re-add your widget to the sidebar or widget area.
+= 2.0 =
+* Supports multiple widgets
 
 == Changelog ==
+= 2.0 =
+* Supports multiple widgets
+
 = 1.5 =
 * Add missing `ul` tags.
 
