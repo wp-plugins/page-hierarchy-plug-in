@@ -9,11 +9,11 @@ Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds a sidebar widget to let you show the list of pages beneath a particular page on your site
+Adds sidebar widgets to let you show the list of pages beneath a particular page on your site
 
 == Description ==
 
-Adds a sidebar widget to let you show the list of pages beneath a particular page on your site
+Adds sidebar widgets to let you show the list of pages beneath a particular page on your site
 
 A quick way to show a subset of pages - without having to show all the pages on the site.
 
