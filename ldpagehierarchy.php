@@ -19,6 +19,8 @@ Version 2.0 (February 8, 2014) Proper support for multi-widget
 
 // Put functions into one big function we'll call at the plugins_loaded
 // action. This ensures that all required plugin functions are defined.
+
+// This is the original version of the code - which supports old widgets.  If you have no old widgets, it doesn't run.
 function widget_subpagehierarchy_init() {
 
 	// Check for the required plugin functions. This will prevent fatal
@@ -86,7 +88,7 @@ function widget_subpagehierarchy_init() {
 	}	
 	// This registers our widget so it appears with the other available
 	// widgets and can be dragged and dropped into any active sidebars.
-	wp_register_sidebar_widget('ldpagehierarchy', 'Sub page hierarchy [old]', 'widget_subpagehierarchy');
+	wp_register_sidebar_widget('ldpagehierarchy', 'Sub page hierarchy [old]', 'widget_subpagehierarchy', array('description'=> __( 'Adds a sidebar widget to let you show the list of pages beneath a particular page on your site.', 'subpagehierarchy' )));
 
 	// This registers our optional widget control form. Because of this
 	// our widget will have a button that reveals a 300x100 pixel form.
@@ -99,7 +101,7 @@ foreach ($ldpagehierarchy_listofwidgets AS $ldpagehierarchy_sidebar) {
 	if( in_array('ldpagehierarchy',$ldpagehierarchy_sidebar) ) add_action('plugins_loaded', 'widget_subpagehierarchy_init');
 }
 
-// Start again from scratch
+// Start again from scratch - this version of the code handles multiple widgets
 
 class subpagehierarchy_widget extends WP_Widget {
 
@@ -111,7 +113,7 @@ class subpagehierarchy_widget extends WP_Widget {
 		parent::__construct(
 			'subpagehierarchy_widget', // Base ID
 			__('Sub page hierarchy', 'subpagehierarchy'), // Name
-			array( 'description' => __( 'Adds a sidebar widget to let you show the list of pages beneath a particular page on your site', 'subpagehierarchy' ), ) // Args
+			array( 'description' => __( 'Adds a sidebar widget to let you show the list of pages beneath a particular page on your site.', 'subpagehierarchy' ), ) // Args
 		);
 	}
 
@@ -123,13 +125,8 @@ class subpagehierarchy_widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		// outputs the content of the widget
-		if(isset($instance['headpage'])):
-			$vars = $instance;
-		else:
-			$vars = get_option('widget_subpagehierarchy');
-		endif;
-		$title = apply_filters( 'widget_title', $vars['title'] );
-		$headpage = intval($vars['headpage']);
+		$title = apply_filters( 'widget_title', $instance['title'] );
+		$headpage = intval($instance['headpage']);
 		echo $args['before_widget'];
 		if ( ! empty( $title ) )
 			echo $args['before_title'] . $title . $args['after_title'];
@@ -148,11 +145,7 @@ class subpagehierarchy_widget extends WP_Widget {
 		// Get our options and see if we're handling a form submission.
 		$options = get_option('widget_subpagehierarchy');
 		if ( !isset($instance['title']) ):
-			if ( !isset($options['title']) ):
-				$instance = array('title'=>__('New title','subpagehierarchy') , 'headpage'=> 0 );
-			else:
-				$instance = $options;
-			endif;
+			$instance = array('title'=>__('New title','subpagehierarchy') , 'headpage'=> 0 );
 		endif;
 		$title = $instance['title'];
 		$headpage = $instance['headpage'];
@@ -176,7 +169,7 @@ class subpagehierarchy_widget extends WP_Widget {
 			echo "</p>";
 		else:
 			?>
-			<p style="text-align:right;"><em>To use this widget, please add some pages to your site.</em></p>
+			<p class="widefat"><em>To use this widget, please add some pages to your site.</em></p>
 			<?php
 		endif;
 	}
