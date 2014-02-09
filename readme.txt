@@ -41,7 +41,7 @@ Yes. Unfortunately, moving from the deprecated `register_sidebar_widget()` to th
 * Supports multiple widgets and internationalisation
 
 == Changelog ==
-= 2.1 =
+= 2.0.1 =
 * Supports internationalisation
 
 = 2.0 =
