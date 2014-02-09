@@ -56,7 +56,7 @@ function widget_subpagehierarchy_init() {
 		// Get our options and see if we're handling a form submission.
 		$options = get_option('widget_subpagehierarchy');
 		if ( !is_array($options) )
-			$options = array('title'=>'Pages', 'headpage'=>'0');
+			$options = array('title'=>__('New title','subpagehierarchy'), 'headpage'=>'0');
 		if ( $_POST['subpagehierarchy-submit'] ) {
 
 			// Remember to sanitize and format use input appropriately.
