@@ -3,7 +3,7 @@
 Plugin Name: Sub page hierarchy
 Description: Adds a sidebar widget to let you show the list of pages beneath a particular page on your site
 Author: Martin Tod
-Version: 2.0
+Version: 2.0.1
 
 */
 
@@ -15,6 +15,7 @@ Version 1.3 (June 22, 2012) Fixing the invisible drop-down box problem.
 Version 1.4 (January 13, 2013) Remove deprecated functions
 Version 1.5 (December 15, 2013) Add <ul> tags
 Version 2.0 (February 8, 2014) Proper support for multi-widget
+Version 2.0.1 (February 9, 2014) Completed internationalisation
 */
 
 // Put functions into one big function we'll call at the plugins_loaded
@@ -69,7 +70,7 @@ function widget_subpagehierarchy_init() {
 		$headpage = intval($options['headpage']);
 		// Here is our little form segment. Notice that we don't need a
 		// complete form. This will be embedded into the existing form.
-		echo '<p style="text-align:right;"><label for="subpagehierarchy-title">Title: <input style="width: 200px;" id="subpagehierarchy-title" name="subpagehierarchy-title" type="text" value="'.$title.'" /></label></p>';
+		echo '<p style="text-align:right;"><label for="subpagehierarchy-title">'.__('Title:', 'subpagehierarchy').' <input style="width: 200px;" id="subpagehierarchy-title" name="subpagehierarchy-title" type="text" value="'.$title.'" /></label></p>';
 		// Get the details for the drop down box
 		$dropargs = array(
 			'selected'           => $headpage,
@@ -78,21 +79,21 @@ function widget_subpagehierarchy_init() {
 		);
 		$pages = get_pages();
 		if(!empty($pages)):
-			echo '<p style="text-align:right;"><label for="subpagehierarchy-headpage">Head page:';
+			echo '<p style="text-align:right;"><label for="subpagehierarchy-headpage">'. __('Head page:', 'subpagehierarchy');
 			wp_dropdown_pages( $dropargs );
 			echo '</label></p>';
 		else:
-			echo '<p style="text-align:right;"><em>To use this widget, please add some pages to your site.</em></p>';
+			echo '<p style="text-align:right;"><em>'.__('To use this widget, please add some pages to your site.','subpagehierarchy').'</em></p>';
 		endif;
 		echo '<input type="hidden" id="subpagehierarchy-submit" name="subpagehierarchy-submit" value="1" />';
 	}	
 	// This registers our widget so it appears with the other available
 	// widgets and can be dragged and dropped into any active sidebars.
-	wp_register_sidebar_widget('ldpagehierarchy', 'Sub page hierarchy [old]', 'widget_subpagehierarchy', array('description'=> __( 'Adds a sidebar widget to let you show the list of pages beneath a particular page on your site.', 'subpagehierarchy' )));
+	wp_register_sidebar_widget('ldpagehierarchy', __('Sub page hierarchy [old]','subpagehierarchy'), 'widget_subpagehierarchy', array('description'=> __( 'Adds a sidebar widget to let you show the list of pages beneath a particular page on your site.', 'subpagehierarchy' )));
 
 	// This registers our optional widget control form. Because of this
 	// our widget will have a button that reveals a 300x100 pixel form.
-	wp_register_widget_control('ldpagehierarchy', 'Sub page hierarchy [old]', 'widget_subpagehierarchy_control');
+	wp_register_widget_control('ldpagehierarchy', __('Sub page hierarchy [old]','subpagehierarchy'), 'widget_subpagehierarchy_control');
 }
 
 // Check if there are any old widgets in place...
@@ -163,13 +164,13 @@ class subpagehierarchy_widget extends WP_Widget {
 		);
 		if(!empty($pages)):
 		?>
-			<p><label for="<?php $this->get_field_id( 'headpage' ) ?>">Head page:</label>
+			<p><label for="<?php $this->get_field_id( 'headpage' ) ?>"><?php _e('Head page:', 'subpagehierarchy'); ?></label>
 			<?php 
 			wp_dropdown_pages( $dropargs ); 
 			echo "</p>";
 		else:
 			?>
-			<p class="widefat"><em>To use this widget, please add some pages to your site.</em></p>
+			<p class="widefat"><em><?php _e('To use this widget, please add some pages to your site.','subpagehierarchy'); ?></em></p>
 			<?php
 		endif;
 	}
