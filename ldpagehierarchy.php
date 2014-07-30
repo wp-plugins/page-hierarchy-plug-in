@@ -97,7 +97,7 @@ function widget_subpagehierarchy_init() {
 }
 
 // Check if there are any old widgets in place...
-$ldpagehierarchy_listofwidgets = wp_get_sidebars_widgets();
+$ldpagehierarchy_listofwidgets = get_option('sidebars_widgets');
 foreach ($ldpagehierarchy_listofwidgets AS $ldpagehierarchy_sidebar) {
 	if( in_array('ldpagehierarchy',$ldpagehierarchy_sidebar) ) add_action('plugins_loaded', 'widget_subpagehierarchy_init');
 }
