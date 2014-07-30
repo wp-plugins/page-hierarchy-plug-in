@@ -3,9 +3,9 @@ Contributors: mpntod
 Donate link: http://www.martintod.org.uk/blog/?p=96
 Tags: widget,list,page,sidebar
 Requires at least: 2.2.0
-Tested up to: 3.9
+Tested up to: 3.9.1
 Author URI: http://www.martintod.org.uk/blog/
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,10 +37,13 @@ e.g.
 Yes. Unfortunately, moving from the deprecated `register_sidebar_widget()` to the new `wp_register_sidebar_widget()` function removes your widget from the widget area or sidebar.  If you just put it back into the widget area or sidebar, your settings should still be there.
 
 == Upgrade notice ==
-= 2.0.1 =
-* Supports multiple widgets and internationalisation
+= 2.0.2 =
+* Supports multiple widgets. Addresses error with `wp_get_sidebars_widgets();` function.
 
 == Changelog ==
+= 2.0.2 =
+* Addresses error with `wp_get_sidebars_widgets();` function.
+
 = 2.0.1 =
 * Supports internationalisation
 

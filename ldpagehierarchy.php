@@ -3,7 +3,7 @@
 Plugin Name: Sub page hierarchy
 Description: Adds a sidebar widget to let you show the list of pages beneath a particular page on your site
 Author: Martin Tod
-Version: 2.0.1
+Version: 2.0.2
 
 */
 
@@ -16,6 +16,7 @@ Version 1.4 (January 13, 2013) Remove deprecated functions
 Version 1.5 (December 15, 2013) Add <ul> tags
 Version 2.0 (February 8, 2014) Proper support for multi-widget
 Version 2.0.1 (February 9, 2014) Completed internationalisation
+Version 2.0.2 (July 30, 2014) Addresses bug with 
 */
 
 // Put functions into one big function we'll call at the plugins_loaded
@@ -99,7 +100,7 @@ function widget_subpagehierarchy_init() {
 // Check if there are any old widgets in place...
 $ldpagehierarchy_listofwidgets = get_option('sidebars_widgets');
 foreach ($ldpagehierarchy_listofwidgets AS $ldpagehierarchy_sidebar) {
-	if( in_array('ldpagehierarchy',$ldpagehierarchy_sidebar) ) add_action('plugins_loaded', 'widget_subpagehierarchy_init');
+	if( is_array($ldpagehierarchy_sidebar) && in_array('ldpagehierarchy',$ldpagehierarchy_sidebar) ) add_action('plugins_loaded', 'widget_subpagehierarchy_init');
 }
 
 // Start again from scratch - this version of the code handles multiple widgets
@@ -146,7 +147,7 @@ class subpagehierarchy_widget extends WP_Widget {
 		// Get our options and see if we're handling a form submission.
 		$options = get_option('widget_subpagehierarchy');
 		if ( !isset($instance['title']) ):
-			$instance = array('title'=>__('New title','subpagehierarchy') , 'headpage'=> 0 );
+			$instance = array('title'=>__('','subpagehierarchy') , 'headpage'=> 0 );
 		endif;
 		$title = $instance['title'];
 		$headpage = $instance['headpage'];
