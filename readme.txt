@@ -3,7 +3,7 @@ Contributors: mpntod
 Donate link: http://www.martintod.org.uk/blog/?p=96
 Tags: widget,list,page,sidebar
 Requires at least: 2.2.0
-Tested up to: 3.9.1
+Tested up to: 4.0
 Author URI: http://www.martintod.org.uk/blog/
 Stable tag: 2.0.2
 License: GPLv2 or later
