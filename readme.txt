@@ -1,4 +1,4 @@
-=== Sub Page List ===
+=== Sub Page List Widget ===
 Contributors: mpntod
 Donate link: http://www.martintod.org.uk/blog/?p=96
 Tags: widget,list,page,sidebar,menu,parent,child
@@ -31,7 +31,6 @@ e.g.
 1. Click 'change' and then 'save changes'
 == Frequently asked questions ==
 
-
 = Help. My widget disappeared with the upgrade to version 1.4. Is that right? =
 
 Yes. Unfortunately, this happened with the upgrade to version 1.4.  Moving from the deprecated `register_sidebar_widget()` to the new `wp_register_sidebar_widget()` function removes your widget from the widget area or sidebar.  If you just put it back into the widget area or sidebar, your settings should still be there.
@@ -42,7 +41,7 @@ Yes. Unfortunately, this happened with the upgrade to version 1.4.  Moving from 
 
 == Changelog ==
 = 2.0.3 =
-* Changed name of the plug-in from 'Sub Page Hierarchy' to 'Sub Page List'
+* Changed name of the plug-in from 'Sub Page Hierarchy' to 'Sub Page List Widget'
 
 = 2.0.2 =
 * Addresses error with `wp_get_sidebars_widgets();` function.

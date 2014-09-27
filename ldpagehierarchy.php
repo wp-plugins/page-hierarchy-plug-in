@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Sub Page List
+Plugin Name: Sub Page List Widget
 Description: An easy widget to let you show a clickable list of pages below a particular 'parent' page on your site
 Author: Martin Tod
 Version: 2.0.2
@@ -17,7 +17,7 @@ Version 1.5 (December 15, 2013) Add <ul> tags
 Version 2.0 (February 8, 2014) Proper support for multi-widget
 Version 2.0.1 (February 9, 2014) Completed internationalisation
 Version 2.0.2 (July 30, 2014) Addresses bug with `wp_get_sidebars_widgets();` function.
-Version 2.0.3 (September 27, 2014) Renamed
+Version 2.0.3 (September 27, 2014) Renamed from 'Sub Page Hierarchy' to 'Sub Page List Widget'
 */
 
 // Put functions into one big function we'll call at the plugins_loaded
