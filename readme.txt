@@ -1,21 +1,21 @@
 === Sub Page hierarchy ===
 Contributors: mpntod
 Donate link: http://www.martintod.org.uk/blog/?p=96
-Tags: widget,list,page,sidebar
+Tags: widget,list,page,sidebar,menu,parent
 Requires at least: 2.2.0
 Tested up to: 4.0
-Author URI: http://www.martintod.org.uk/blog/
+Author URI: http://www.martintod.org.uk/
 Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds sidebar widgets to let you show the list of pages beneath a particular page on your site
+An easy widget to let you show a clickable list of pages below a particular 'parent' page on your site
 
 == Description ==
 
-Adds sidebar widgets to let you show the list of pages beneath a particular page on your site
+A quick way to show a set of the pages in a particular part of your site without having to show all the pages on the site.
 
-A quick way to show a subset of pages - without having to show all the pages on the site.
+Adds a widget to let you show a clickable list of pages beneath a particular 'parent' page on your site.
 
 == Installation ==
 
