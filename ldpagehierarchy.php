@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Sub page hierarchy
-Description: Adds a sidebar widget to let you show the list of pages beneath a particular page on your site
+Plugin Name: Sub Page List
+Description: An easy widget to let you show a clickable list of pages below a particular 'parent' page on your site
 Author: Martin Tod
 Version: 2.0.2
 

@@ -1,7 +1,7 @@
-=== Sub Page hierarchy ===
+=== Sub Page List ===
 Contributors: mpntod
 Donate link: http://www.martintod.org.uk/blog/?p=96
-Tags: widget,list,page,sidebar,menu,parent
+Tags: widget,list,page,sidebar,menu,parent,child
 Requires at least: 2.2.0
 Tested up to: 4.0
 Author URI: http://www.martintod.org.uk/
