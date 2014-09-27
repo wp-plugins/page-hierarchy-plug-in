@@ -41,6 +41,9 @@ Yes. Unfortunately, moving from the deprecated `register_sidebar_widget()` to th
 * Supports multiple widgets. Addresses error with `wp_get_sidebars_widgets();` function.
 
 == Changelog ==
+= 2.0.3 =
+* Changed name of the plug-in from 'Sub Page Hierarchy' to 'Sub Page List'
+
 = 2.0.2 =
 * Addresses error with `wp_get_sidebars_widgets();` function.
 

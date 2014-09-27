@@ -16,7 +16,8 @@ Version 1.4 (January 13, 2013) Remove deprecated functions
 Version 1.5 (December 15, 2013) Add <ul> tags
 Version 2.0 (February 8, 2014) Proper support for multi-widget
 Version 2.0.1 (February 9, 2014) Completed internationalisation
-Version 2.0.2 (July 30, 2014) Addresses bug with 
+Version 2.0.2 (July 30, 2014) Addresses bug with `wp_get_sidebars_widgets();` function.
+Version 2.0.3 (September 27, 2014) Renamed
 */
 
 // Put functions into one big function we'll call at the plugins_loaded
