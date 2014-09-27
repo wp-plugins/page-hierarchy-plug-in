@@ -1,4 +1,4 @@
-=== Sub Page List ===
+=== Sub Page List Widget ===
 Contributors: mpntod
 Donate link: http://www.martintod.org.uk/blog/?p=96
 Tags: widget,list,page,sidebar,menu,parent,child
