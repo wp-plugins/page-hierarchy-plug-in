@@ -32,9 +32,9 @@ e.g.
 == Frequently asked questions ==
 
 
-= Help. My widget disappeared with the latest upgrade. Is that right? =
+= Help. My widget disappeared with the upgrade to version 1.4. Is that right? =
 
-Yes. Unfortunately, moving from the deprecated `register_sidebar_widget()` to the new `wp_register_sidebar_widget()` function removes your widget from the widget area or sidebar.  If you just put it back into the widget area or sidebar, your settings should still be there.
+Yes. Unfortunately, this happened with the upgrade to version 1.4.  Moving from the deprecated `register_sidebar_widget()` to the new `wp_register_sidebar_widget()` function removes your widget from the widget area or sidebar.  If you just put it back into the widget area or sidebar, your settings should still be there.
 
 == Upgrade notice ==
 = 2.0.2 =
