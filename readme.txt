@@ -9,13 +9,13 @@ Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-An easy widget to let you show a clickable list of pages below a particular 'parent' page on your site
+An easy widget to let you show a clickable list of pages linked to a particular 'parent' page on your site
 
 == Description ==
 
 A quick way to show a set of the pages in a particular part of your site without having to show all the pages on the site.
 
-Adds a widget to let you show a clickable list of pages beneath a particular 'parent' page on your site.
+Adds a widget to let you show a clickable list of pages linked to a particular 'parent' page on your site.
 
 == Installation ==
 
