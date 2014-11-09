@@ -36,10 +36,13 @@ e.g.
 Yes. Unfortunately, this happened with the upgrade to version 1.4.  Moving from the deprecated `register_sidebar_widget()` to the new `wp_register_sidebar_widget()` function removes your widget from the widget area or sidebar.  If you just put it back into the widget area or sidebar, your settings should still be there.
 
 == Upgrade notice ==
-= 2.0.2 =
-* Supports multiple widgets. Addresses error with `wp_get_sidebars_widgets();` function.
+= 2.0.4 =
+* Added options to link title and limit depth of list display.
 
 == Changelog ==
+= 2.0.4 =
+* Renamed to 'Sub Page Hierarchy Widget'. Added options to link title and limit depth of list display
+
 = 2.0.3 =
 * Changed name of the plug-in from 'Sub Page Hierarchy' to 'Sub Page List Widget'
 
