@@ -130,11 +130,21 @@ class subpagehierarchy_widget extends WP_Widget {
 		// outputs the content of the widget
 		$title = apply_filters( 'widget_title', $instance['title'] );
 		$headpage = intval($instance['headpage']);
+		$depth = 0;
+		if(isset($instance['depth'])):
+			$depth = intval($instance['depth']);
+		endif;
+		$pagelink = '';
+		$pageendlink = '';
+		if(isset($instance['linkhead']) && $instance['linkhead']):
+			$pagelink = '<a href="'.get_page_link($headpage).'">';
+			$pagelinkend = "</a>";
+		endif;
 		echo $args['before_widget'];
 		if ( ! empty( $title ) )
-			echo $args['before_title'] . $title . $args['after_title'];
+			echo $args['before_title']. $pagelink. $title . $pagelinkend. $args['after_title'];
 		echo "<ul class='subpagehierarchy_list'>";
-		wp_list_pages("sort_column=menu_order&child_of=$headpage&title_li=" );
+		wp_list_pages("sort_column=menu_order&child_of=$headpage&depth=$depth&title_li=" );
 		echo "</ul>".$args['after_widget'];		
 	}
 
@@ -152,6 +162,14 @@ class subpagehierarchy_widget extends WP_Widget {
 		endif;
 		$title = $instance['title'];
 		$headpage = $instance['headpage'];
+		$depth = 0;
+		if(isset($instance['depth'])):
+			$depth = $instance['depth'];
+		endif;
+		$linkhead = false;
+		if(isset($instance['linkhead'])):
+			$linkhead = $instance['linkhead'];
+		endif;
 		?>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:','subpagehierarchy' ); ?></label> 
@@ -175,6 +193,16 @@ class subpagehierarchy_widget extends WP_Widget {
 			<p class="widefat"><em><?php _e('To use this widget, please add some pages to your site.','subpagehierarchy'); ?></em></p>
 			<?php
 		endif;
+		$depthchecked = '';
+		if($depth) $depthchecked = 'checked="checked"';
+		?>
+		<p><input id="<?php echo $this->get_field_id( 'depth' ); ?>" name="<?php echo $this->get_field_name( 'depth' ); ?>" type="checkbox" value="1" <?php echo $depthchecked ?>><label for="<?php echo $this->get_field_id( 'depth' ); ?>"><?php _e( 'Only show top level pages','subpagehierarchy' ); ?></label></p>
+		<?php
+		$linkheadchecked = '';
+		if($linkhead) $linkheadchecked = 'checked="checked"';
+		?>
+		<p><input id="<?php echo $this->get_field_id( 'linkhead' ); ?>" name="<?php echo $this->get_field_name( 'linkhead' ); ?>" type="checkbox" value="1" <?php echo $linkheadchecked ?>><label for="<?php echo $this->get_field_id( 'depth' ); ?>"><?php _e( "Link the title to the 'head page'",'subpagehierarchy' ); ?></label></p>
+		<?php
 	}
 
 	/**
@@ -190,6 +218,8 @@ class subpagehierarchy_widget extends WP_Widget {
 			$instance['title'] = strip_tags( $new_instance['title'] );
 		endif;
 		$instance['headpage'] = intval($new_instance['headpage']);
+		$instance['linkhead'] = intval($new_instance['linkhead']);
+		$instance['depth'] = intval($new_instance['depth']);
 		return $instance;	
 	}
 }
