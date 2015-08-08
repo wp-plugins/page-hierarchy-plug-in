@@ -3,7 +3,7 @@
 Plugin Name: Sub Page Hierarchy Widget
 Description: An easy widget to let you show a clickable list of pages below a particular 'parent' page on your site
 Author: Martin Tod
-Version: 2.0.2
+Version: 2.0.5
 
 */
 
@@ -136,7 +136,7 @@ class subpagehierarchy_widget extends WP_Widget {
 			$depth = intval($instance['depth']);
 		endif;
 		$pagelink = '';
-		$pageendlink = '';
+		$pagelinkend = '';
 		if(isset($instance['linkhead']) && $instance['linkhead']):
 			$pagelink = '<a href="'.get_page_link($headpage).'">';
 			$pagelinkend = "</a>";

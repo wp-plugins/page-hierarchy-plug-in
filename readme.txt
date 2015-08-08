@@ -3,9 +3,9 @@ Contributors: mpntod
 Donate link: http://www.martintod.org.uk/blog/?p=96
 Tags: widget,list,page,sidebar,menu,parent,child
 Requires at least: 2.2.0
-Tested up to: 4.1
+Tested up to: 4.3
 Author URI: http://www.martintod.org.uk/
-Stable tag: 2.0.2
+Stable tag: 2.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,10 +36,13 @@ e.g.
 Yes. Unfortunately, this happened with the upgrade to version 1.4.  Moving from the deprecated `register_sidebar_widget()` to the new `wp_register_sidebar_widget()` function removes your widget from the widget area or sidebar.  If you just put it back into the widget area or sidebar, your settings should still be there.
 
 == Upgrade notice ==
-= 2.0.4 =
-* Added options to link title and limit depth of list display.
+= 2.0.5 =
+* Fixed small bug showing in debug mode.
 
 == Changelog ==
+= 2.0.5 =
+* Fixed small bug showing in debug mode.
+
 = 2.0.4 =
 * Renamed to 'Sub Page Hierarchy Widget'. Added options to link title and limit depth of list display
 
